@@ -1,0 +1,54 @@
+ INFO : 2022-10-04 01:01:11 - (FileManager.java:  17) ---- Program START ----
+ INFO : 2022-10-04 01:01:11 - (FileManager.java:  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:01:11 - (FileDelete.java:  10) ---2 FileDelete START
+ INFO : 2022-10-04 01:06:18 - (FileManager.java:  17) ---- Program START ----
+ INFO : 2022-10-04 01:06:18 - (FileManager.java:  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:06:18 - (FileDelete.java:  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:06:18 - (FileManager.java:  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:06:18 - (FileMovePermanent.java:  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:11:24 - (FileManager.java:  17) ---- Program START ----
+ INFO : 2022-10-04 01:11:24 - (FileManager.java:  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:11:24 - (FileDelete.java:  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:11:24 - (FileManager.java:  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:11:24 - (FileMovePermanent.java:  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:11:41 - (FileManager.java    :  17) ---- Program START ----
+ INFO : 2022-10-04 01:11:41 - (FileManager.java    :  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:11:41 - (FileDelete.java     :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:11:41 - (FileManager.java    :  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:11:41 - (FileMovePermanent.java:  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:13:04 - (FileManager.java    :  17) ---- Program START ----
+ INFO : 2022-10-04 01:13:04 - (FileManager.java    :  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:13:04 - (FileDelete.java     :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:13:04 - (FileManager.java    :  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:13:04 - (FileMovePermanent.java:  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:13:59 - (FileManager.java    :  17) ---- Program START ----
+ INFO : 2022-10-04 01:13:59 - (FileManager.java    :  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:13:59 - (FileDelete.java     :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:13:59 - (FileManager.java    :  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:13:59 - (FileMovePermanent.java:  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:14:19 - (FileManager.java              :  17) ---- Program START ----
+ INFO : 2022-10-04 01:14:19 - (FileManager.java              :  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:14:19 - (FileDelete.java               :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:14:19 - (FileManager.java              :  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:14:19 - (FileMovePermanent.java        :  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:14:37 - (FileManager.java         :  17) ---- Program START ----
+ INFO : 2022-10-04 01:14:37 - (FileManager.java         :  23) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:14:37 - (FileDelete.java          :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:14:37 - (FileManager.java         :  27) ---1 FileDelete Start 
+ INFO : 2022-10-04 01:14:37 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:15:48 - (FileManager.java         :  17) ---- Program START ----
+ INFO : 2022-10-04 01:15:48 - (FileManager.java         :  23) ---1 FileDelete Thread Call 
+ INFO : 2022-10-04 01:15:48 - (FileDelete.java          :  13) ---2 FileDelete START
+ INFO : 2022-10-04 01:15:48 - (FileManager.java         :  27) ---1 FileMovePermanent Thread Call 
+ INFO : 2022-10-04 01:15:48 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent START
+ INFO : 2022-10-04 01:16:44 - (FileManager.java         :  17) ---- Program START ----
+ INFO : 2022-10-04 01:16:44 - (FileManager.java         :  23) ---1 FileDelete Thread Call 
+ INFO : 2022-10-04 01:16:44 - (FileDelete.java          :  13) ---2 FileDelete Thread Start
+ INFO : 2022-10-04 01:16:44 - (FileManager.java         :  27) ---1 FileMovePermanent Thread Call 
+ INFO : 2022-10-04 01:16:44 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent Thread Start
+ INFO : 2022-10-04 01:16:44 - (FileManager.java         :  33) ---- Program END ----
+ INFO : 2022-10-04 01:17:20 - (FileManager.java         :  17) ---- Program START ----
+ INFO : 2022-10-04 01:17:20 - (FileManager.java         :  23) ---1 FileDelete Thread Call 
+ INFO : 2022-10-04 01:17:20 - (FileDelete.java          :  13) ---2 FileDelete Thread Start
+ INFO : 2022-10-04 01:17:20 - (FileManager.java         :  27) ---1 FileMovePermanent Thread Call 
+ INFO : 2022-10-04 01:17:20 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent Thread Start
