@@ -3,7 +3,6 @@ package com.cnettech;
 import com.cnettech.util.Common;
 import com.cnettech.util.Log4j;
 
-import java.net.SocketException;
 import java.util.Properties;
 
 /**
