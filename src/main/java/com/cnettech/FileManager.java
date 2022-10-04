@@ -21,23 +21,35 @@ public class FileManager
             final Properties pros = Common.getProperties();
 
             // 파일삭제 프로세스 시작
-            Log4j.log.info("---1 FileDelete Thread Call ");
+            Log4j.log.info("1--- FileDelete Thread Call ");
             FileDelete fileDelete = new FileDelete();
             fileDelete.start();
 
             // 영구 녹취 이동 프로세스 시작
-            Log4j.log.info("---1 FileMovePermanent Thread Call ");
+            Log4j.log.info("1--- FileMovePermanent Thread Call ");
             FileMovePermanent fileMovePermanent = new FileMovePermanent();
             fileMovePermanent.start();
 
+            // 녹취 이동 프로세스 시작
+            Log4j.log.info("1--- FileMove Thread Call ");
+            FileMove fileMove = new FileMove();
+            fileMove.start();
+
+            SignalHandler signalHandler = new SignalHandlerImpl( );
+            Signal.handle(new Signal("INT"), signalHandler); //Ctrl-C
+            Signal.handle(new Signal("TERM"), signalHandler);
+
             while(!bExit) {
                 try {
+                    Log4j.log.info("1--- Main Thread Call ");
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {}
             }
 
             fileDelete.stop();
             fileMovePermanent.stop();
+            fileMove.stop();
+
         } catch (Exception e) {
             e.printStackTrace();
         }

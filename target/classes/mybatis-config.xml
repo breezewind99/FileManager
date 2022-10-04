@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-
-	<!-- <properties resource="application.properties" />-->
-<!--	<properties resource="application.properties" />-->
-	<!--
-	<properties resource="org/mybatis/example/config.properties">
-		<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
-		<property name="url" value="jdbc:oracle:thin:@192.168.0.71:1521:ORCL"/>
-		<property name="username" value="cnet"/>
-		<property name="password" value="~!cnet2580!~"/>
-	</properties>
-	-->
 	<settings>
      	<!--      	
      		<setting name="cacheEnabled" value="true" />
@@ -43,6 +32,6 @@
    	
 	<!-- SQLMAPPER (environments 하단에 위치한다.) -->
 	<mappers>
-		<mapper resource="mapper/dashboard.xml"/>
+		<mapper resource="mapper/file.xml"/>
 	</mappers>
 </configuration>

@@ -3,20 +3,20 @@ package com.cnettech;
 import com.cnettech.util.Log4j;
 
 /**
- * 파일 삭제 클래스
+ * 녹취 이동 클래스
  */
-public class FileDelete extends Thread {
+public class FileMove extends Thread {
 
     private boolean running;
 
-    public FileDelete() {
-        Log4j.log.info(String.format("-2-- FileDelete Thread Create"));
+    public FileMove() {
+        Log4j.log.info(String.format("-2-- FileMove Thread Create"));
     }
 
     @Override
     public void run() {
         running = true;
-        Log4j.log.info(String.format("-2-- FileDelete Thread Start"));
+        Log4j.log.info(String.format("-2-- FileMove Thread Start"));
         try {
             while (running) {
                 Process();
@@ -28,6 +28,6 @@ public class FileDelete extends Thread {
     }
 
     public void Process() {
-        Log4j.log.info(String.format("--3- FileDelete Process"));
+        Log4j.log.info(String.format("--3- FileMove Process"));
     }
 }
