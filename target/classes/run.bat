@@ -1,2 +1,2 @@
 @echo off
-java -cp ".\lib\*;." com.cnettech.Mongate
+java -cp ".\lib\*;." com.cnettech.FileManager

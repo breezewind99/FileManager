@@ -2,6 +2,8 @@ package com.cnettech;
 
 import com.cnettech.util.Common;
 import com.cnettech.util.Log4j;
+import sun.misc.Signal;
+import sun.misc.SignalHandler;
 
 import java.util.Properties;
 
@@ -11,6 +13,7 @@ import java.util.Properties;
  */
 public class FileManager
 {
+    public static boolean bExit = false;
     public static void main( String[] args )
     {
         Log4j.log.info("---- Program START ----");
@@ -26,8 +29,26 @@ public class FileManager
             Log4j.log.info("---1 FileMovePermanent Thread Call ");
             FileMovePermanent fileMovePermanent = new FileMovePermanent();
             fileMovePermanent.start();
+
+            while(!bExit) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {}
+            }
+
+            fileDelete.stop();
+            fileMovePermanent.stop();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private static class SignalHandlerImpl implements SignalHandler
+    {
+        @Override
+        public void handle(Signal signal)
+        {
+            bExit = true;
         }
     }
 }
