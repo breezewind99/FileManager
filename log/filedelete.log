@@ -72,3 +72,8 @@
  INFO : 2022-10-04 23:45:09 - (FileDelete.java          :  13) ---2 FileDelete Thread Start
  INFO : 2022-10-04 23:45:09 - (FileManager.java         :  29) ---1 FileMovePermanent Thread Call 
  INFO : 2022-10-04 23:45:09 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent Thread Start
+ INFO : 2022-10-04 23:51:45 - (FileManager.java         :  19) ---- Program START ----
+ INFO : 2022-10-04 23:51:45 - (FileManager.java         :  24) ---1 FileDelete Thread Call 
+ INFO : 2022-10-04 23:51:45 - (FileDelete.java          :  13) ---2 FileDelete Thread Start
+ INFO : 2022-10-04 23:51:45 - (FileManager.java         :  29) ---1 FileMovePermanent Thread Call 
+ INFO : 2022-10-04 23:51:45 - (FileMovePermanent.java   :  13) ---2 FileMovePermanent Thread Start
