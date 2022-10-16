@@ -1,60 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="channel">
+<mapper namespace="file">
 <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: INCLUDE ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  -->
 
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  QUERY  ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  -->
 
-	<!-- 단일 정보 selectOne -->
-	<select id="selectOne" parameterType="map" resultType="int">
-		/* 단일 정보 selectOne */
-		select count(phone_num) as cnt 
-		from crec_ip_info
-		where 1=1
-		<if test='system_code!=null and system_code!=""'>
-		and system_code = #{system_code}
-		</if>
-		<if test='tn_num!=null and tn_num!=""'>
-		and tn_num = #{tn_num}
-		</if>
+	<!-- tbl_record SelectLocalList -->
+	<select id="SelectLocalList" parameterType="map" resultType="map">
+		/* tbl_record 조회 SelectLocalList */
+		SELECT
+			'/data/recdata/' || REC_DATE || '/' || to_char(REC_START_TIME,'HH24') || '/' || REC_FILENAME AS FileList
+		FROM
+			tbl_record
+		WHERE 1=1
+		AND	REC_DATM BETWEEN to_date(#{check_date} || ' 00:00:00' ,'YYYY-MM-DD HH24:MI:SS') AND to_date(#{check_date} || ' 23:59:59','YYYY-MM-DD HH24:MI:SS')
+		AND NVL(REC_STORE_CODE,'0') = '0'
 	</select>
-	
-	<!-- crec_ip_info selectList -->
-	<select id="selectList" parameterType="map" resultType="map">
-		/* crec_ip_info 조회 selectList */
-		select 
-			phone_num
-		 	,phone_ip
-			,channel
-			,system_code
-			,mac
-			,tn_num
-		from crec_ip_info
-		where 1=1	
-		<if test='system_code!=null and system_coded!=""'>
-		and system_code = #{system_code}
-		</if>
-		<if test='tn_num!=null and tn_num!=""'>
-		and tn_num = #{tn_num}
-		</if>
-	</select>
-	
-	<!-- 단일 정보 selectUserGroup -->
-	<select id="selectUserGroup" parameterType="map" resultType="int">
-		/* 단일 정보 selectUserGroup */
-		select spart_code,part_name 
-		from tbl_user_group
-		where 1=1
-		<if test='bpart_code!=null and bpart_code!=""'>
-		and bpart_code = #{bpart_code}
-		</if>
-		<if test='mpart_code!=null and mpart_code!=""'>
-		and mpart_code = #{mpart_code}
-		</if>
-		<if test='spart_code!=null and spart_code!=""'>
-		and spart_code = #{spart_code}
-		</if>
+
+	<!-- tbl_record SelectStorageList -->
+	<select id="SelectStorageList" parameterType="map" resultType="map">
+		/* tbl_record 조회 SelectStorageList */
+		SELECT
+			'/storage/' || REC_DATE || '/' || to_char(REC_START_TIME,'HH24') || '/' || REC_FILENAME AS FileList
+		FROM
+			tbl_record
+		WHERE 1=1
+		AND	REC_DATM BETWEEN to_date(#{check_date} || ' 00:00:00' ,'YYYY-MM-DD HH24:MI:SS') AND to_date(#{check_date} || ' 23:59:59','YYYY-MM-DD HH24:MI:SS')
+		AND NVL(REC_STORE_CODE,'0') = '0'
 	</select>
 
 <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: INSERT :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  -->

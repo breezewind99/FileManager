@@ -4,12 +4,10 @@ import com.cnettech.util.Common;
 import com.cnettech.util.Log4j;
 import sun.misc.Signal;
 import sun.misc.SignalHandler;
-
 import java.util.Properties;
 
 /**
- * Hello world!
- *
+ * 파일 관리자
  */
 public class FileManager
 {
