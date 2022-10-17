@@ -39,9 +39,11 @@ public class FileManager
 
             while(!bExit) {
                 try {
-                    Log4j.log.info("1--- Main Thread Call ");
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {}
+                    Log4j.log.info("1--- Main Thread Loop ");
+                    Thread.sleep(60000);
+                } catch (InterruptedException e) {
+                    Log4j.log.info("1--- Main Thread Stop ");
+                }
             }
 
             fileDelete.stop();

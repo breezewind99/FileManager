@@ -20,7 +20,7 @@ public class FileMovePermanent extends Thread {
         try {
             while (running) {
                 Process();
-                Thread.sleep(1000);
+                Thread.sleep(60000);
             }
         } catch (InterruptedException e) {
             throw new RuntimeException(e);

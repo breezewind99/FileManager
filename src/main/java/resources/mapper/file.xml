@@ -15,6 +15,7 @@
 			tbl_record
 		WHERE 1=1
 		AND	REC_DATM BETWEEN to_date(#{check_date} || ' 00:00:00' ,'YYYY-MM-DD HH24:MI:SS') AND to_date(#{check_date} || ' 23:59:59','YYYY-MM-DD HH24:MI:SS')
+		AND REC_MODE = #{main_backup}
 		AND NVL(REC_STORE_CODE,'0') = '0'
 	</select>
 
@@ -27,6 +28,7 @@
 			tbl_record
 		WHERE 1=1
 		AND	REC_DATM BETWEEN to_date(#{check_date} || ' 00:00:00' ,'YYYY-MM-DD HH24:MI:SS') AND to_date(#{check_date} || ' 23:59:59','YYYY-MM-DD HH24:MI:SS')
+		AND REC_MODE = #{main_backup}
 		AND NVL(REC_STORE_CODE,'0') = '0'
 	</select>
 
