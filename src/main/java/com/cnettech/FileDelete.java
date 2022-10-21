@@ -21,7 +21,7 @@ public class FileDelete extends Thread {
     private boolean running;
     private SqlSession sqlSession = null;
 
-    private String  sMainBackup = pros.getProperty("system.main","0");
+    private final String  sMainBackup = pros.getProperty("system.main","0");
     public FileDelete() {
         Log4j.log.info(String.format("-2-- FileDelete Thread Create"));
     }
@@ -55,7 +55,6 @@ public class FileDelete extends Thread {
                 sqlSession = SqlSessionFactoryManager.getSqlSessionFactory().openSession(true);
 
             String CheckDate = java.time.LocalDate.now().minusMonths(CheckLocalMonth).toString();
-            argMap.clear();
             Log4j.log.info(String.format("[FileDelete Local] Check Date : %s", CheckDate));
 //            argMap.put("check_date", "2022-08-23");
             argMap.put("check_date", CheckDate);
@@ -95,9 +94,8 @@ public class FileDelete extends Thread {
                 sqlSession = SqlSessionFactoryManager.getSqlSessionFactory().openSession(true);
 
             String CheckDate = java.time.LocalDate.now().minusMonths(CheckStorageMonth).toString();
-            argMap.clear();
             Log4j.log.info(String.format("[FileDelete Storage] Check Date : %s", CheckDate));
-            //argMap.put("check_date", "2022-08-23");
+//            argMap.put("check_date", "2022-08-23");
             argMap.put("check_date", CheckDate);
             argMap.put("main_backup", sMainBackup);
 

@@ -37,10 +37,10 @@ public class FileManager
             Signal.handle(new Signal("INT"), signalHandler); //Ctrl-C
             Signal.handle(new Signal("TERM"), signalHandler);
 
+            Log4j.log.info("1--- Main Thread Loop ");
             while(!bExit) {
                 try {
-                    Log4j.log.info("1--- Main Thread Loop ");
-                    Thread.sleep(60000);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     Log4j.log.info("1--- Main Thread Stop ");
                 }

@@ -90,6 +90,7 @@ public class Common {
 		} catch (Exception e) {
 			PROGRAM_DIRECTORY = ""; // Current working directory instead.
 		}
-		return PROGRAM_DIRECTORY;
+		//System.out.println(PROGRAM_DIRECTORY.replace("/file","file"));
+		return PROGRAM_DIRECTORY.replace("/file:","");
 	}
 }
